@@ -1,0 +1,97 @@
+.sibay ~ p{
+	color:green;
+}
+.sibay + p {
+	color: red;
+}
+.myObject{
+	clear: both;
+	width:50%;
+}
+
+.noneselected{
+	width:50%;
+	
+	display: block-inline; 
+}
+
+.nonecontent{
+	width:50%;
+	
+	display: block-inline;
+	/*display: none;*/
+}
+
+.flowselected{
+	float: left;
+	width:50%;
+	
+	display: block-inline;
+	/*display: none;*/
+}
+
+.flowcontent{
+	float:right;
+	width:50%;
+	
+	display: block-inline;
+	/*display: none;*/
+}
+
+
+.metadataselected{
+	float:left;
+	display: block-inline;
+	/*display: none;*/
+}
+
+.metadatacontent{
+	float:right;
+	width:50%;
+	
+	display: block-inline;
+}
+
+.interactiveselected{
+	float:left;
+	display: block-inline;
+	/*display: none;*/
+}
+
+.interactivecontent{
+	float:right;
+	width:50%;
+	
+	display: block-inline;
+}
+
+.phrasingselected{
+	float:left;
+	display: block;
+	/*display: none;*/
+}
+
+.embeddedingselected{
+	float:left;
+	display: block;
+	/*display: none;*/
+}
+
+.headingselected{
+	float:left;
+	display: block;
+	/*display: none;*/
+}
+
+.sectioningselected{
+	float:left;
+	display: block;
+	/*display: none;*/
+}
+
+.sectioningcontent{
+	float:right;
+	width:50%;
+	
+	display: block-inline;
+}

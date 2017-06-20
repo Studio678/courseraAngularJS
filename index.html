@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>courseraWebHopkins by studio678</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" href="css/style.css"/>
+    
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">courseraWebHopkins</h1>      
+      <a href="https://github.com/studio678/courseraWebHopkins/" class="btn">View on GitHub</a>
+      <a href="https://github.com/studio678/courseraWebHopkins/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/studio678/courseraWebHopkins/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+
+<h2>Start your work at local with this comand in working directory:</h2>
+<code>browser-sync start --server --directory --files "**\*"</code>
+
+<h3>This is a few useful features with link:</h3>
+<ul>
+<li><a href="http://codepen.io">Codepen service for share you code</a></li>
+<li><a href=https://validator.w3.org/#validate_by_input>Validator for your code</a></li>
+<li><a href="http://caniuse.com">Caniuse.com site for check can you use this feature in your code</a></li>
+<li><a href="www.w3schools.com/browsers/browsers_stats.asp">Browser statistics</a></li>
+<li><a href="stackoverflow.com">Stackoverflow.com here you can find help with your code</a></li>
+<li><a href="https://jsfiddle.net">JsFiddle.net show your code quikly</a></li>
+<li><a href="http://www.w3.org/TR/html5/dom.html#kindes-of-content">7 types of HTML5 content</a></li>
+</ul>
+
+<h3>This is our first html tags:</h3>
+<ul>
+<li>
+<code>&lt;html> - open-closed tag in start of the html page after doctype</code>
+</li>
+<li>
+<code>&lt;head> - open-closed tag in start of the html page after html tag</code>
+</li>
+<li>
+<code>&lt;meta> - self-closed tag in head of the html page after for set charset</code>
+</li>
+<li>
+<code>&lt;body> - open-closed tag in start of content our web page after &lt;/head> tag</code>
+</li>
+</ul>
+
+<h2>HTML5 concepts</h2>
+<div style="clear: both;"></div>
+<div style="float: left;width: 50%;">
+	<ul>
+		<li>
+			<strong>Block-Level Elements</strong>
+			<ul>
+				<li>
+					Render to begin on a new line
+				</li>
+				<li>
+					May contain inline or other block-level elements
+				</li>
+				<li style="color:#AA5050;">	
+					<span >Roughli Flow Content(HTML5 category)</span>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div style="float:right;width: 50%;">
+	<ul>
+		<li>
+			<strong>Inline Elements</strong>
+			<ul>
+				<li>
+					Render on the same line by default
+				</li>
+				<li>
+					May only contain other inline elements
+				</li>
+				<li style="color:#AA5050;">
+					<span>Roughly Phrasing Content(HTML5 category)</span>
+				</li>
+			</ul>
+		</li>		
+	</ul>
+</div>
+<div style="clear: both;height:30px;"></div>
+<div>
+	<ul>
+		<li>
+			<strong>HTML5 replaces these definitions with more complex set of content categories.</strong>
+		</li>
+		<li>
+			<strong>However, this distinction remains practical because it aligns well with exiting css rules.</strong>
+		</li>
+	</ul>
+</div>
+<article>
+<h3>Available 7 types of content</h3>
+<span>They are:</span>
+<ul>
+	<li>
+		<a href="https://www.w3.org/TR/html5/dom.html#metadata-content-0">Metadata content</a>		
+	</li>
+	<li>
+		<a href="https://www.w3.org/TR/html5/dom.html#flow-content-1">Flow content</a>
+	</li>
+	<li>
+		<a href="https://www.w3.org/TR/html5/dom.html#sectioning-content-0">Sectioning content</a>
+	</li>
+	<li>
+		<a href="https://www.w3.org/TR/html5/dom.html#heading-content-0">Heading content</a>
+	</li>
+	<li>
+		<a href="https://www.w3.org/TR/html5/dom.html#phrasing-content-1">Phrathing content</a>
+	</li>
+	<li>
+		<a href="https://www.w3.org/TR/html5/dom.html#embedded-content-2">Embedded content</a>
+	</li>
+	<li>
+		<a href="https://www.w3.org/TR/html5/dom.html#interactive-content-0">Interactive content</a>
+	</li>
+</ul>
+<hr>
+<div>
+	<p><object data="js/content-venn.svg" height="288" width="1000"><img alt="" height="288" src="js/content-venn.png" width="512"></object></p>
+</div>
+<hr>
+<h2>Using spesial symbols in html,or Entity references:</h2>
+<p>
+For using tag "<" - we should use "&amp;lt;".<br/>
+For using tag ">" - we should use "&amp;gt;".<br/>
+For using tag "&amp;" - we should use "&amp;amp;".<br/>
+For using simbol "&copy;" - we should use "&amp;copy;".<br/>
+For make not braking spase we should use "&amp;nbsp;".<br/>
+For email when we use qoutes, we should use "&amp;quot;".<br/>
+</p>
+</article>
+<article class="sibay">
+<h2>CSS combining selectors</h2>
+<ul>
+	<li>
+		Combining selectors
+		<ul>
+			<li>
+				Element with class selector(selector.class) withot any space betwen them;
+			</li>
+			<li>
+				Child (direct) selector (selector &gt; selector) and again rules start reding from right to left;
+			</li>
+			<li>
+				<p>Descendent selector (selector selector), for example li inside div, even if it not the directly child of di element.</p>
+				<span>For example</span><br/>
+				<code>div li{<br/>
+					  color:red;<br/>
+					  }<br/>
+				</code>
+				
+				<code>
+				&lt;div&gt;<br/>
+				&lt;ul&gt;<br/>
+				&lt;li&gt;Some text will red&lt;/li&gt;<br/>
+				&lt;/ul&gt;<br/>
+				&lt;/div&gt;<br/>
+				</code>
+			</li>
+		</ul>		
+	</li>
+	<li>
+		Didn't cover
+		<ul>
+			<li>
+				Adjacent sibling selector (selector + selector), it implimenting rules on element first after left with same parent matching with right selector.
+			</li>
+			<li>
+				General sibling selector (selector ~ selector), it implimenting rules on all elements with the same parent after left element matching with right selector.
+			</li>
+		</ul>
+	</li>
+</ul>
+</article>
+<article>
+<h2>Pseudo-Class Selector(interactive classes, for examle :onhover)</h2>
+<ul>
+	<li>
+		Many pseudo-class selectors exist
+	</li>
+	<li>
+		We cover:
+		<ul>
+			<li>
+				:link - when user go to this link
+			</li>
+			<li>
+				:visited - when this link was visited
+			</li>
+			<li>
+				:hover - when user focus mouse on element
+			</li>
+			<li>
+				:active - when user click on element but he steel pushing the button on mouse
+			</li>
+			<li>
+				:nth-child(...) - n-th element of this type on this parent
+			</li>
+		</ul>
+	</li>
+</ul>
+<h2>box-sizing: border-box; make your box auto fit to width</h2>
+</article>
+<article>
+<h2>Where you placing css styles Influences on css rules.</h2>
+<p>Less important rules in external css file, then implements rules in headerof a web page, after that css rules direct in css, and this rules will be that rules that we will see on the web page. So last declaration wins if they are conflict. Declartions merge if they are differant foe one element.Dom tree inheritance.</p>
+<h3>Import external style file on your web page:</h3>
+<code>&lt;link rel="stylesheet" href="style.css"&gt;</code>
+<br/>
+<h3>Implimetnting css rules at header looks like this:</h3>
+<code>
+&lt;style&gt;<br/>
+h2{
+	color:maroon;
+}
+h3{
+	color:blue;
+}
+&lt;/style&gt;
+</code>
+<h3>Implimenting css rules for the element:</h3>
+<code>
+	&lt;div style="h1:maroon;h2:green;"&gt;	
+</code>
+</article>
+<article>
+<h3>For somo mobile devices you need next meta tag</h3>
+<code>&lt;meta name="viewport" content="width"=device-width, initial-scale=1"&gt;</code>
+</article>
+<article>
+	<h2>Visit with the Client</h2>
+	<h3>Most clients have NO IDEA what they want!</h3>
+	<ul>
+		<li>
+			It's YOUR JOB to ask questions to figure it out
+		</li>
+		<li>
+			Bring web site examples of similar businesses
+		</li>
+	</ul>
+</article>
+<section>
+	<article>
+		<h1 style="text-align: center;">Java Script</h1>
+		<h2>Variables</h2>
+		<code style="background-color: #000; box-shadow: 2px 2px 5px rgba(0,0,0,0.7);">
+			<strong><span style="color:#71d8ed">var</span> <span style="color: #acdd58">message</span> <span style="color: #f23672">=</span> <span style="color: #ebd982">"hi"</span><span style="color: #fff">;</span>  </strong>
+		</code>
+		<ul>
+			<li>
+				Variable defenition should always start with 'var'	
+			</li>
+			<li>
+				No types are declared
+				<ul>
+					<li>
+						JS is dynamicaly typed language
+					</li>
+					<li>
+						Same variable can hold different types during the life of execution
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<h2>Functions</h2>
+		<div style="background-color: #000; width: 200px; border-radius: 6px; box-shadow: 4px 4px 20px rgba(0,0,0,0.7);">
+		<code style="background-color: #000;">
+			<strong><span style="color: #71d8ed;"></span> <span style="color: #acdd58;">a</span> <span style="color: #fff;">() {<br/>  &nbsp;&nbsp;...<br/>}</span></strong>
+		</code>				
+		</div>
+		<br/>
+		<h3>Scope chain</h3>
+		<ul>
+			<li>
+				Everything is executing in Execution Context
+			</li>
+			<li>
+				Function invocation creates a new Execution Context
+			</li>
+			<li>
+				Each Execution Context has:
+				<ul>
+					<li>
+						Its own Variable Enviroment
+					</li>
+					<li>
+						Special 'this' object
+					</li>
+					<li>
+						Reference to its Outer Enviroment
+					</li>
+				</ul>
+			</li>
+			<li>
+				Global scope does not have an Outer Enviroment as it's the most outer there is
+			</li>
+		</ul>
+		<h3>Summary</h3>
+		<ul>
+			<li>
+				Difining variables - dynamicaly typed
+			</li>
+			<li>
+				Defining functions - creates its own scope (lexical)
+			</li>
+			<li>
+				JS code runs withing an Execution Context
+			</li>
+			<li>
+				Scope chain is used to retrieve variables from Outer Variable Enviroments
+			</li>
+		</ul>
+		<h2>Javascript Types</h2>
+		<ul>
+			<li>
+				<h3>Javascript defines 7 built-in types</h3>
+				<ul>
+					<li>
+						Objects and 6 primitives
+					</li>
+				</ul>
+			</li>
+			<li>
+				<h3>Object type is a collection of name/value pairs</h3>
+				<br/>
+				Person Object
+				<div style="background-color: #777777;padding:5px; color: #fff;">
+					firstName: "Yaakov",<br/>
+					lastName: "Chaikin",<br/>
+					social: {<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					linkedin: "yaakovchaikin",<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	twitter: "yaakovchaikin",<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+					facebook: "CourseraWebDev"<br/>
+					}
+					<br/>
+					
+					<br/>
+				</div>
+			</li>
+			<li>
+				<h3>Primitive type can contain a single, immutable value</h3>
+				<ul>
+					<li>
+						Single value, i.e. not an object
+					</li>
+					<li>
+						Immutable means once it's set, it can't be changed
+						<ul>
+							<li>
+								Value becomes read only
+							</li>
+							<li>
+								You can create another value based on existing one
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h4 style="margin-bottom: 0px;">Primitive Type: Boolean</h4>
+						<ul>						
+							<li>
+								true
+							</li>
+							<li>
+								false
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h4>Primitive Type: Underfined</h4>
+						<div style="border:1px solid #000; box-shadow: 4px 4px 15px rgba(0,0,0,0.6);width: 600px;">
+							<strong style="color: #ff0000;">Underfined signifies that no value has over been set</strong><br/>
+						</div>
+						<br/>
+						<ul>
+							<li>
+								Can only have one value: undefined
+							</li>
+							<li>
+								You can set a variable to undefined, but you should <strong>NEVER</strong> do it
+								<ul>
+									<li>
+										Its meaning is that it's never been defined, so defining it to undefined is counter to its core meaning
+									</li>
+								</ul>
+							</li>							
+						</ul>
+					</li>
+					<li>
+						<h4>Primitive Type: Null</h4>
+						<div style="border:1px solid #000; box-shadow: 4px 4px 15px rgba(0,0,0,0.6);width: 600px;">
+							<strong style="color: #ff0000;">Null signifies lack of value</strong><br/>
+						</div>
+						<br/>
+						<ul>
+							<li>
+								As opposed to undefined, which is lack of defenition
+							</li>
+							<li>
+								Can only have one value: null
+							</li>
+							<li>
+								It's ok to explicitly set a varible to null
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h4>Primitive Type: Number</h4>
+						<div style="border:1px solid #000; box-shadow: 4px 4px 15px rgba(0,0,0,0.6);width: 600px;">
+							<strong style="color: #ff0000;">Number is only numeric type in Javascript</strong><br/>
+						</div>
+						<br/>
+						<ul>
+							<li>
+								Always represented under the hood as double-precision 64-bit floating point
+							</li>
+							<li>
+								JS does not hae an integer type
+								<ul>
+									<li>
+										Integers are subset of doubles instead of a separate data type
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h4>Primitive Type: String</h4>
+						<div style="border:1px solid #000; box-shadow: 4px 4px 15px rgba(0,0,0,0.6);width: 600px;">
+							<strong style="color: #ff0000;">String is sequence of characters used to represent text</strong><br/>
+						</div>
+						<br/>
+						<ul>
+							<li>
+								Use either single ore double quotes, i.e., 'text' or "text"
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h4>Primitive Type: Symbol</h4>
+						<div style="border:1px solid #000; box-shadow: 4px 4px 15px rgba(0,0,0,0.6);width: 600px;">
+							<strong style="color: #ff0000;">Symbol is new to ES6 Not covered in this class</strong><br/>
+						</div>
+						<br/>
+						<ul>
+							<li>
+								ES6 (released 2015) isn't widely supported or used yet
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<h3>Undefined means variable memmory has been allocated but no value has ever been explicitly set yet</h3>
+			</li>
+		</ul>
+		<h2>Common Language Constructs</h2>
+		Use lecture 43,44,45,46,47,48,49,50,51,52 folder<br/>
+
+		<hr/>
+		<h1>DOM Manipulation</h1>
+		<ul>
+			<li>
+				The hirest level of object for js is window
+			</li>
+			<li>
+				The window object contains a document object, its instansof HTMLDocument
+			</li>
+			<li>
+				The document object contains the hole html page
+				<ul> It contains few important methods
+					<li>
+						getElementById() - return element by html id
+					</li>
+					<li>
+						querySelector() - return element by css selector
+					</li>
+				</ul>
+			</li>
+			<li>
+				If you want to change behave of something on page script should located at very bottom of body
+			</li>
+
+		</ul>
+		<p>If you used events from objects in html, for exemple in button element, this will return global object window. But if you will use unobstrusive event binding like in example bellow<br/></p>
+		<code>
+			// Unobtrusive event binding<br/>
+    		document.querySelector("button")<br/>
+      		&nbsp;&nbsp;.addEventListener("click", sayHello);
+		</code>
+		<p>In this example object this will return button as an object. And this let us to change objects on this events</p>
+		
+		<code>
+			document.addEventListener("DOMContentLoaded",<br/>
+  				&nbsp;&nbsp;function (event) {<br/>
+  				<hr/>
+  			document.querySelector("body")<br/>
+		      &nbsp;&nbsp;.addEventListener("mousemove",<br/>
+		        &nbsp;&nbsp;&nbsp;function (event) {<br/>
+		          &nbsp;&nbsp;&nbsp;&nbsp;if (event.shiftKey === true) {<br/>
+		          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  console.log("x: " + event.clientX);<br/>
+		            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log("y: " + event.clientY);<br/>
+		          &nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+		        &nbsp;&nbsp;&nbsp;}<br/>
+		      );<br/>
+		</code>
+		Look at lecture 54<br/>
+		<h1>What is JSON?</h1>
+		JavaScript Object Notation
+		<ul>
+			<li>
+				Lightweight data-interchange format
+			</li>
+			<li>
+			<ul>
+				<li>
+					Simple textual representation of data
+				</li>
+			</ul>
+			</li>
+			<li>
+				Easy for humans to read and write
+			</li>
+			<li>
+				Easy for mashines to parse and generate
+			</li>
+			<li>
+				Completely independent of any language
+			</li>
+		</ul>
+		<h2>JSON Syntax Rules</h2>
+		<ul>
+			<li>
+				Subset of Javascript object literal syntax..but
+				<ul>
+					<li>
+						Property names must be in <strong>double qoutes</strong>
+					</li>
+					<li>
+						String values must be in <strong>double qoutes</strong>
+					</li>
+					<li>
+						That's it!
+					</li>
+				</ul>
+			</li>
+			<li>
+				Syntax for everything else is exactly like for objects literal
+			</li>
+		</ul>
+		<h2>Common Misconception</h2>
+		<ul>
+			<li>
+				JSON is NOT a Javascript Object Literal
+			</li>
+			<li>
+				JSON is just a string
+			</li>
+			<li>
+				The syntax of JSON is based on object literal through
+			</li>
+			<li>
+				Need to convert JSON into JS object
+			</li>
+		</ul>
+		<h3>converts drom json string to object</h3>
+		<code>
+			var obj = JSON.parse(jsonString);
+		</code>
+		<h3>converts from object to json string</h3>
+		<code>
+			var str = JSON.stringify(obj);
+		</code>
+		
+	</article>
+</section>
+<!--p>This text will be red</p>
+<p>This text will be green</p>
+
+<p>This text should be green.</p>
+<code>This not.</code>
+<p>This text shoud be green too</p>
+<div>
+<p>This not match the general sublime selector .sibay ~ p</p>
+</div>
+<p>This will green again</p>-->
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/studio678.github.io/courseraWebHopkins">HTML, CSS, and Javascript for Web Developers</a> is maintained by <a href="https://github.com/studio678">studio678</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
