@@ -587,6 +587,9 @@ h3{
 		
 	</article>
 </section>
+<br/>
+<hr/>
+<br/>
 <section>
 	<article>
 		<h1>AngularJS weak1</h1>
@@ -632,7 +635,170 @@ h3{
 		In js file this should be give to function as a parameter like <code>$scope</code><br/>
 		<br/>
 		Also you can print var located in scope like <code>{{name}}</code><br/>
-
+		<h2>Lecture6 example</h2>
+		Html file<br/>
+		<br/>
+		<code>
+		&lt;!DOCTYPE html&gt;<br/>
+		&lt;html&gt;<br/>
+		&nbsp;&nbsp;&lt;head&gt;<br/>
+		&nbsp;&nbsp;&lt;meta charset="utf-8"&gt;<br/>
+		&nbsp;&nbsp;&lt;script src="angular.min.js"&gt;&lt;/script&gt;<br/>
+		&nbsp;&nbsp;&lt;script src="app.js"&gt;&lt;/script&gt;<br/>
+		&nbsp;&nbsp;&lt;style&lt;body { font-size: 1.3em; }&lt;/style&gt;<br/>
+		&nbsp;&nbsp;&lt;title&gt;Name Calculator&lt;/title&gt;<br/>
+		&lt;/head&gt;<br/>
+		&lt;body ng-app="NameCalculator"&gt;<br/>
+		&nbsp;&nbsp;&lt;h1&gt;Name Calculator&lt;/h1&gt;<br/>
+		&nbsp;&nbsp;&lt;div ng-controller="NameCalculatorController"&gt;<br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Your name:<br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text"<br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ng-model="name"<br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ng-keyup="displayNumeric();"&gt;<br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;Total Numeric value of person's name is:</br/> 
+		&nbsp;&nbsp;&nbsp;&nbsp;{{totalValue}}&lt;/div&gt;<br/>
+		&nbsp;&nbsp;&lt;/div&gt;<br/>
+		&lt;/body&gt;<br/>
+		&lt;/html&gt;<br/>
+		</code>
+		<br/>
+		app.js file<br/>
+		<br/>
+		<code>
+		(function () {<br/>
+		'use strict';<br/>
+		<br/>
+		angular.module('NameCalculator', [])<br/>
+		<br/>
+		.controller('NameCalculatorController', function ($scope) {<br/>
+		&nbsp;&nbsp;$scope.name = "";<br/>
+		&nbsp;&nbsp;$scope.totalValue = 0;<br/>
+		  <br/>
+		&nbsp;&nbsp;$scope.displayNumeric = function () {<br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;var totalNameValue = calculateNumericForString($scope.name);<br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;$scope.totalValue = totalNameValue;<br/>
+		&nbsp;&nbsp;};<br/>
+		  <br/>
+		  <br/>
+		&nbsp;&nbsp;function calculateNumericForString(string) {<br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;var totalStringValue = 0;<br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;for (var i = 0; i < string.length; i++) {<br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;totalStringValue += string.charCodeAt(i);<br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+		    <br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;return totalStringValue;<br/>
+		&nbsp;&nbsp;}<br/>
+		  <br/>
+		});<br/>
+		<br/>
+		<br/>
+		})();<br/>
+		<br/>
+		</code>
+		<br/>
+		<h2>Dependency injection</h2>
+		<p>It's a design pattern that implements inversion of control for resolving dependencies.</p>
+		<div>
+			<img src="images/w1/l9s0.png"/>
+		</div>
+		<br/>
+		<h3>Summary</h3>
+		<ul>
+			<li>
+				Design pattern: Dependency Injection (DI)
+			</li>
+			<li>
+				Implements Inversion of Control (IoC)
+			</li>
+			<li>
+				Client gets called with the dependency by some system
+				<ul>
+					<li>
+						In our case, the "system" is AngularJS
+					</li>
+				</ul>
+			</li>
+			<li>
+				Client is not responsible for instantiating the dependency
+			</li>
+		</ul>
+		<br/>
+		<h2>Minification</h2>
+		<p>Process of removing all unnecessary characters from source code without changing its functionality</p>
+		<ul>
+			<li>
+				<strong>Purpose:</strong> reduces the amount of data tranceferred from server
+			</li>
+			<li>
+				You can use next <a href="https://javascript-minifier.com">link</a> for minification js
+			</li>
+			<li>
+				DI in Angular needs to be minification proof
+			</li>
+			<li>
+				2 methods
+				<ul>
+					<li>
+						Inline array with function as last element
+					</li>
+					<li>
+						Attach $inject property to the function object
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<h2>Expression: {{exp}}</h2>
+		<p>Something that evaluates to some value</p>
+		<ul>
+			<li>
+				Processed by Angular & <i>roughly</i> similar to the result <i>of eval(some_js)</i>
+			</li>
+			<li>
+				Executed in the context of the scope & has access to properties on $scope		
+			</li>
+			<li>
+				Doesn't throw errors if it results in a TypeError of ReferenceError
+			</li>
+			<li>
+				Control flow functions (e.g., 'if' statements, etc.) are not allowed
+			</li>
+			<li>
+				Accept a filter or a filter chain to format the output
+			</li>
+		</ul>
+		<h3>Interpolation</h3>
+		<p>Process of evaluation a <i>string literal</i> containing one or more placeholders, which are replaced with values.</p>
+		<ul>
+			<li>
+				In Angular, this string:<br/>
+				<code>
+					Message is {{ message }}
+				</code>				
+				<br/>
+				<code>
+					(provided message = "hello") 
+				</code> &nbsp;is interpolated into this string:<br/>
+				<br/>
+				<code>
+					Message is hello
+				</code>
+			</li>
+			<li>
+				Still connected to the original <i>message</i> property
+				<ul>
+					<li>
+						If $scope.message changes, so the interpolation result will change too
+					</li>
+				</ul>
+			</li>			
+		</ul>
+		<br/>
+		Here you can find FAQ for this <a href="https://github.com/jhu-ep-coursera/fullstack-course5/blob/master/FAQ.md">course</a>
+		<br/>
+		<h3>That was module1</h3>
+		<hr/>
 	</article>
 </section>
 <!--p>This text will be red</p>
