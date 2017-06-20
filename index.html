@@ -587,6 +587,40 @@ h3{
 		
 	</article>
 </section>
+<section>
+	<article>
+		<h1>AngularJS weak1</h1>
+		<p>	You can download it at next <a href="https://code.angularjs.org">link</a><br/>
+			this <a href="https://code.angularjs.org/1.6.4/docs/api">docs</a> for last AngularJS1(1.6.4)<br/>
+		</p>
+		If you need approach your app to the entire html tag just add this in open tag
+		<code>
+			ng-app="myFirstApp"
+		</code>
+		If you need to approach some controller to div add next to open tag
+		<code>
+		ng-controller="MyFirstController"
+		</code>
+		In javaScript file it looks like next
+		<code>
+			(function () {<br/>
+				'use strict';<br/>
+				<br/>
+				angular.module('myFirstApp', [])<br/>
+				<br/>
+				.controller('MyFirstController', function ($scope) {<br/>
+				  $scope.name = "Yaakov";<br/>
+				  $scope.sayHello = function () {<br/>
+				    return "Hello Coursera!";<br/>
+				  };<br/>
+				});<br/>
+				<br/>
+				})();<br/>
+
+		</code>
+
+	</article>
+</section>
 <!--p>This text will be red</p>
 <p>This text will be green</p>
 
