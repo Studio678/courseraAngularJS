@@ -593,31 +593,45 @@ h3{
 		<p>	You can download it at next <a href="https://code.angularjs.org">link</a><br/>
 			this <a href="https://code.angularjs.org/1.6.4/docs/api">docs</a> for last AngularJS1(1.6.4)<br/>
 		</p>
-		If you need approach your app to the entire html tag just add this in open tag
+		If you need approach your app to the entire html tag just add this in open tag<br/>
+		<br/>
 		<code>
 			ng-app="myFirstApp"
 		</code>
-		If you need to approach some controller to div add next to open tag
+		<br/>
+		<br/>
+		If you need to approach some controller to div add next to open tag<br/>
+		<br/>
 		<code>
 		ng-controller="MyFirstController"
-		</code>
-		In javaScript file it looks like next
+		</code><br/>
+		<br/>
+		In javaScript file it looks like next<br/>
+		<br/>
 		<code>
 			(function () {<br/>
-				'use strict';<br/>
+			'use strict';<br/>
 				<br/>
-				angular.module('myFirstApp', [])<br/>
+			&nbsp;&nbsp;angular.module('myFirstApp', [])<br/>
 				<br/>
-				.controller('MyFirstController', function ($scope) {<br/>
-				  $scope.name = "Yaakov";<br/>
-				  $scope.sayHello = function () {<br/>
-				    return "Hello Coursera!";<br/>
-				  };<br/>
-				});<br/>
-				<br/>
-				})();<br/>
+			&nbsp;&nbsp;.controller('MyFirstController', function ($scope) {<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;$scope.name = "Yaakov";<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;$scope.sayHello = function () {<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;return "Hello Coursera!";<br/>
+			&nbsp;&nbsp;};<br/>
+			});<br/>
+			<br/>
+			})();<br/>
 
 		</code>
+		<br/>
+		In this example, our html file is <strong>view</strong>.<br/>
+		And app.js <strong>.controller</strong> is a <strong>view model</strong>.<br/>
+		<br/>
+		The <strong>scope</strong> is an object that represent global object for this controller.</br>
+		In js file this should be give to function as a parameter like <code>$scope</code><br/>
+		<br/>
+		Also you can print var located in scope like <code>{{name}}</code><br/>
 
 	</article>
 </section>
